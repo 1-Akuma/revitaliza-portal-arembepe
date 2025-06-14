@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revitaliza Portal de Arembepe</title>
+    <link rel="icon" href="img/logo1.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="img/logo1.png" alt="Logo do Projeto Revitaliza" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#beneficios">O Projeto</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Participe da Transformação do Portal de Arembepe!</h1>
+            <p>Nossa comunidade precisa de ações coletivas para revitalização, limpeza e preservação ambiental. Vamos juntos?</p>
+        </section>
+
+        <section id="beneficios">
+            <h2>Por que agir agora e o que está em risco?</h2>
+            <div class="beneficios-grid">
+                <div class="card-beneficio">
+                    <h3>✅ Benefícios de Agir</h3>
+                    <ul>
+                        <li>Valorização dos imóveis com um ambiente mais limpo.</li>
+                        <li>Redução de doenças com o controle do lixo e entulho.</li>
+                        <li>Convivência mais harmoniosa em áreas comuns seguras.</li>
+                        <li>Maior contato com a natureza e incentivo à educação ambiental.</li>
+                    </ul>
+                </div>
+                <div class="card-maleficio">
+                    <h3>❌ Riscos da Inação</h3>
+                    <ul>
+                        <li>Proliferação de pragas devido ao lixo e mato alto.</li>
+                        <li>Degradação de áreas comuns e vias internas.</li>
+                        <li>Desvalorização do bairro e afastamento de investimentos.</li>
+                        <li>Conflitos entre moradores sobre responsabilidades.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="processo">
+            <h2>Nossas Medidas Propostas</h2>
+            <p>Atuaremos com mutirões, sinalização educativa, lixeiras apropriadas, comunicação direta com a administração e envolvimento das famílias.</p>
+            <figure>
+                <img src="img/ciclo.png" alt="Plano de ações sustentáveis e revitalizadoras">
+                <figcaption>Ciclo de ações para a revitalização comunitária.</figcaption>
+            </figure>
+        </section>
+
+        <section id="depoimentos">
+            <h2>O que os moradores querem mudar:</h2>
+            <div class="depoimentos-container">
+                <blockquote>
+                    <p>"Precisamos cuidar das áreas verdes que ainda temos aqui."</p>
+                    <footer>- Morador(a) Anônimo</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"É hora de limpar, plantar e recuperar nosso espaço!"</p>
+                    <footer>- Morador(a) Engajado</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Envie suas ideias ou dúvidas</h2>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required aria-label="Seu Nome">
+                <input type="email" id="email" name="email" placeholder="Seu Email" required aria-label="Seu Email">
+                <textarea id="message" name="message" placeholder="Sua Mensagem" required aria-label="Sua Mensagem"></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <p id="responseMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Projeto Comunitário - Portal de Arembepe. Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="chatbot-button" aria-label="Abrir Chatbot">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+    </button>
+
+    <div id="chatbot-container" role="dialog" aria-hidden="true">
+        <div class="chatbot-header">
+            <h3>AI Ajudante do Portal</h3>
+            <button class="chatbot-close-button" aria-label="Fechar Chatbot">X</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages" aria-live="polite">
+            </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Digite sua pergunta...">
+            <button id="chatbot-send-button" aria-label="Enviar Mensagem">➔</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

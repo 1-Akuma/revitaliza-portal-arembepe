@@ -1,15 +1,24 @@
+{
+  "version": 2,
+  "builds": [
     {
-      "rewrites": [
-        {
-          "source": "/api/(.*)",
-          "destination": "/api"
-        }
-      ],
-      "builds": [
-        {
-          "src": "api/index.py",
-          "use": "@vercel/python"
-        }
-      ]
+      "src": "index.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb" }
+    },
+    {
+      "src": "public/*",
+      "use": "@vercel/static"
     }
-    
+  ],
+  "routes": [
+    {
+      "src": "/chat",
+      "dest": "index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}
